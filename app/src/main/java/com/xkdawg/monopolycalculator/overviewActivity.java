@@ -2,14 +2,10 @@ package com.xkdawg.monopolycalculator;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
-
-import java.util.logging.Logger;
 
 public class overviewActivity extends AppCompatActivity {
     private TextView money;
@@ -18,6 +14,15 @@ public class overviewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_overview);
         getSupportActionBar().setTitle("Monopoly Calculator");
+
+
+
+
+
+    }
+    public void goToProperties(View v){
+        Intent intent = new Intent(this, propertiesActivity.class);
+        startActivity(intent);
     }
     public void goToMath(View v){
         Intent intent = new Intent(this, mathActivity.class);

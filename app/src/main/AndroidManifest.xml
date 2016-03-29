@@ -23,6 +23,11 @@
         </activity>
         <activity android:name=".mathActivity">
         </activity>
+        <activity
+            android:name=".propertiesActivity"
+            android:label="@string/title_activity_properties"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

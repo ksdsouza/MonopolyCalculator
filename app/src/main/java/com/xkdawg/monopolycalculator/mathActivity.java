@@ -8,11 +8,12 @@ import android.view.View;
 import android.widget.TextView;
 
 public class mathActivity extends AppCompatActivity {
-    public String num2="";
-    public String operation ="";
+    public String num2 = "";
+    public String operation = "";
     private TextView operationTV;
     private TextView operand;
     private String money;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,72 +21,75 @@ public class mathActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String buttonFrom = intent.getStringExtra("op");
-        if(buttonFrom.equalsIgnoreCase("+")){
-            operation=" + ";
-        }
-        else{
-            operation=" - ";
+        if (buttonFrom.equalsIgnoreCase("+")) {
+            operation = " + ";
+        } else {
+            operation = " - ";
         }
 
         money = intent.getStringExtra("$");
-        TextView moneyTV = (TextView)findViewById(R.id.money);
+        TextView moneyTV = (TextView) findViewById(R.id.money);
         moneyTV.setText(money);
 
 
-        operationTV = (TextView)findViewById(R.id.operation);
-        operand = (TextView)findViewById(R.id.operand);
+        operationTV = (TextView) findViewById(R.id.operation);
+        operand = (TextView) findViewById(R.id.operand);
 
         operationTV.setText(operation);
 
     }
-    public void clearNum(View v){
-        num2="";
+
+    public void clearNum(View v) {
+        num2 = "";
 
 
-            operand.setText(num2);
+        operand.setText(num2);
 
 
     }
-    public void addOperation(View v){
-        if(operationTV!=null){
+
+    public void addOperation(View v) {
+        if (operationTV != null) {
             operationTV.setText(" + ");
-            operation=" + ";
+            operation = " + ";
         }
     }
-    public void subtractOperation(View v){
-        if(operationTV!=null){
+
+    public void subtractOperation(View v) {
+        if (operationTV != null) {
             operationTV.setText(" - ");
-            operation=" - ";
+            operation = " - ";
         }
     }
-    public void del(View v){
+
+    public void del(View v) {
         if (num2 != null && num2.length() > 0) {
-            num2 = num2.substring(0, num2.length()-1);
+            num2 = num2.substring(0, num2.length() - 1);
         }
         operand.setText(num2);
 
     }
-    public void doMath(View v){
+
+    public void doMath(View v) {
         Intent resultIntent = new Intent();
         int total = -1;
         money = money.substring(1);
-        try{
-            if (operation.equals(" + ")){
-                total = Integer.parseInt(money)+Integer.parseInt(num2);
-                Util.info("Monopoly Calculator - mathActivity", ""+Integer.parseInt(money.substring(1)));
-                money ="";
+        try {
+            if (operation.equals(" + ")) {
+                total = Integer.parseInt(money) + Integer.parseInt(num2);
+                Util.info("Monopoly Calculator - mathActivity", "" + Integer.parseInt(money.substring(1)));
+                money = "";
+            } else {
+                total = Integer.parseInt(money) - Integer.parseInt(num2);
             }
-            else{
-                total = Integer.parseInt(money)-Integer.parseInt(num2);
-            }
-        }
-        catch (Exception e){
-            Util.error("Monopoly Calculator - mathActivity",e.toString());
+        } catch (Exception e) {
+            Util.error("Monopoly Calculator - mathActivity", e.toString());
         }
         resultIntent.putExtra("Result", total);
         setResult(Activity.RESULT_OK, resultIntent);
         finish();
     }
+
     public void createNum(View v) {
         switch (v.getId()) {
             case R.id.math_1: {

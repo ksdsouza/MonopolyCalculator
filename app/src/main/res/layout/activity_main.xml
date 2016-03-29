@@ -18,6 +18,7 @@
         android:keepScreenOn="true"
         android:text="Monopoly Calculator"
         android:textColor="@color/colorPrimary"/>
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,24 +43,24 @@
             tools:ignore="UselessParent">
 
             <Button
-                android:onClick="goToOverview"
                 android:id="@+id/newGame"
                 style="?metaButtonBarButtonStyle"
-                android:textColor="@color/colorPrimary"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="New Game"/>
+                android:onClick="goToOverview"
+                android:text="New Game"
+                android:textColor="@color/colorPrimary"/>
 
             <Button
-                android:onClick="goToOverview"
                 android:id="@+id/loadGame"
                 style="?metaButtonBarButtonStyle"
-                android:textColor="@color/colorPrimary"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Load Game"/>
+                android:onClick="goToOverview"
+                android:text="Load Game"
+                android:textColor="@color/colorPrimary"/>
 
         </LinearLayout>
     </FrameLayout>

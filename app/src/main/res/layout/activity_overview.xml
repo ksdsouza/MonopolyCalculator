@@ -28,27 +28,28 @@
 
         <Button
             android:id="@+id/add"
-            android:onClick="goToMath"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/colorAccent"
+            android:onClick="goToMath"
             android:text="+"/>
 
         <Button
-            android:onClick="goToMath"
             android:id="@+id/sub"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/colorAccent"
+            android:onClick="goToMath"
             android:text="-"/>
     </LinearLayout>
 
     <Button
-        android:layout_marginTop="32dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:backgroundTint="@color/colorAccent"
+        android:onClick="goToProperties"
         android:text="Properties"/>
 </LinearLayout>
