@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="Mediterranean" type="id"/>
+    <item name="Baltic" type="id"/>
+    <item name="Oriental" type="id"/>
+    <item name="Vermont" type="id"/>
+    <item name="Connecticut" type="id"/>
+    <item name="StCharles" type="id"/>
+    <item name="States" type="id"/>
+    <item name="Virginia" type="id"/>
+    <item name="StJames" type="id"/>
+    <item name="Tennessee" type="id"/>
+    <item name="NewYork" type="id"/>
+    <item name="Indiana" type="id"/>
+    <item name="Kentucky" type="id"/>
+    <item name="Illinois" type="id"/>
+    <item name="Ventnor" type="id"/>
+    <item name="Atlantic" type="id"/>
+    <item name="Marvin" type="id"/>
+    <item name="Pacific" type="id"/>
+    <item name="NCarolina" type="id"/>
+    <item name="Pennsylvania" type="id"/>
+    <item name="Park" type="id"/>
+    <item name="Boardwalk" type="id"/>
+</resources>
